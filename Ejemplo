@@ -1,0 +1,18 @@
+#include<iostream>
+using namespace std;
+int main (){  
+ 
+ bool a=true;//significa que la variable a es falsa o verdadera
+  if (a || 5>6){ 
+     cout<<"5 > 6";
+  }
+  else if(!a){
+  	cout<<"2323";
+  }
+  else{
+  	cout<<"6 > 5";
+  }
+
+
+return 0;
+}
