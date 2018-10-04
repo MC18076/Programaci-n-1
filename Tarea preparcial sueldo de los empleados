@@ -1,0 +1,60 @@
+//este programa calcula el sueldo de los empleados 
+
+//este programa fue hecho por:
+//Gerardo Jesus Moreno Campos
+
+//carnet: MC18076
+
+#include <iostream>
+#include <iomanip>
+#include <conio.h>
+#include <stdlib.h>
+#include <windows.h>
+using namespace std;
+ 
+ 
+int main(int argc, char**argv){
+	//esta linea de codigo muestra el color de fondo y color de fuente
+	system ("color 2E");
+	//declaracion de variables  
+   int venta;
+   float sueldo;
+	
+	
+	
+	do {
+		//prengunta la venta que realizo al mes
+	cout<<"ingresar su venta realizada en el mes: ";
+	cin>>venta;
+	}while(venta<0);
+		
+	//condiciones que se realizaran en el programa
+	if(venta>0 && venta<=500000){
+		cout<<"el sueldo es: $80.000";
+	}
+	else if (venta>500001 && venta<=1000000){
+		cout<<"el sueldo es: $160.000";
+	}	
+	else if(venta>1000001 && venta<=1500000){
+		cout<<"el sueldo es: 320.000 ";
+	}
+	else if(venta>1500001 && venta<=2500000){
+		cout<<"el sueldo es: 450.000";
+	}
+	else if(venta>2500001 && venta<=4000000){
+		cout<<"el sueldo es: 550.000";
+	}
+	//si las condiciones anteriores no se cumplen se realizara 
+	//esta condicion.
+	else {
+		sueldo = (venta * .20);
+      cout<< fixed << setprecision(2)<<
+	  "el sueldo es $ "<<sueldo<<endl;
+	}
+	//el sonido que se reprodusira al final del resultado
+	Beep (1000,500);
+	
+	cout<<"\a";
+	system ("pause");
+  return 0;
+}
