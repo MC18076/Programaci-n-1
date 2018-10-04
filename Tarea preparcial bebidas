@@ -1,0 +1,66 @@
+//Calcular bebidas 
+//este programa fue hecho por:
+//Gerardo Jesus Moreno Campos
+
+//carnet: MC18076
+
+#include <iostream>
+
+using namespace std;
+
+void p();//se hace declaracion
+
+int main() {
+	
+	//declaracion de variables 
+	int bebidas;
+	int sodas = 1;
+	int jugos = 2;
+	int cantidad;
+	float agua;
+	float azucar;
+	
+	//preguntar al usuario que tipo de vebida desea producir
+	do
+	{
+		cout << " seleccione  el tipo de bebida" << endl;
+		cout << " 1. sodas" << endl;
+		cout << " 2. jugos" << endl;
+		cin >> bebidas;
+		
+	}while (bebidas < 1 || bebidas > 2);
+	
+	p();//se hace el llamado 
+	
+	//esta condicion hace el procedimiento para los insumos 
+	//requeridos para la produccion de sodas
+	if (bebidas ==1){
+		cout << "ingrese la cantidad de sodas que desea producir: " << "\n";
+		cin >> cantidad;
+		agua = cantidad * 500;
+		azucar = cantidad * 800;
+		cout << "la cantidad de sodas que desea producir es: " << cantidad << "\n";
+	}
+	//esta condicion hace el procedimiento para los insumos 
+	//requeridos para la produccion de jugos
+	else if( bebidas == 2) {
+		cout << "ingrese la cantidad de jugos que desea producir: " << "\n";
+		cin >> cantidad;
+		agua = cantidad * 600;
+		azucar = cantidad * 700;
+		cout << "la cantidad de jugos que desea producir es: " << cantidad << "\n";
+	}
+	
+	p();//se hace el llamado
+	
+	//imprimir los resultados 
+	cout << "la cantidad de agua que necesita  es: " << agua << " ml." << "\n";
+	cout << "la cantidad de azucar que necesita es: " << azucar << " g." << "\n";
+	
+	system("pause");
+	return 0;
+}
+//se hace la implementacion
+void p(){
+	system("cls");
+}
