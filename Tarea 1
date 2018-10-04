@@ -1,0 +1,37 @@
+#include <iostream>
+#include <stdlib.h>
+
+using namespace std;
+ 
+ void p();//se hace declaracion
+int main(int argc, char**argv){
+	float costo;
+
+		do {
+		//prenguntar la venta que realizo al mes
+	cout<<"DURACION DE LA LLAMADA: ";
+	cin>>costo;
+	}while(costo<0);
+		p();//se hace el llamado
+	//si la llamada dura 10 minutos se hace esta condicion
+	if(costo>1 && costo<10){
+		costo=(costo * .05);//
+		cout<<"total a pagar es: "<<costo<<endl;
+	}
+	//si la llamada dura 15 minutos se hace esta condicion
+	else if (costo>11 && costo<15){
+		costo=(costo * .08);
+		cout<<"total a pagar es: "<<costo <<endl;
+	}	
+	//si la llamada dura mas de 15 minutos se hace esta condicion
+		else {
+		costo = (costo * .10);
+      cout<<"total a pagar es $ "<<costo <<endl;
+	}
+	system("pause");
+	return 0;
+}
+	//se hace implementacion
+ void p(){
+ 	system("cls");
+ }
